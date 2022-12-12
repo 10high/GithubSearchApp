@@ -19,10 +19,59 @@
   Light
   Dark
   <form action="">
+    <img src="./images/icon-search.svg" alt="">
     <input type="text" id="enterUsername" placeholder="Search GitHub username..." required>
     <button id="searchButton" type="button">Search</button>
   </form>
 
+  <div>
+    <img id="profileImg" src="https://avatars.githubusercontent.com/u/99827666?v=4" alt="">
+    <p id="name">The Octocat</p>
+    <ul>
+      <li>Joined</li>
+      <li id="joinedDate">25 Jan 2011</li>
+    </ul>
+    <p id="username">@octocat</p>
+    <p id="bio">This profile has no bio</p>
+    <div>
+      <ul>
+        <li>Repos</li>
+        <li id="repos">8</li>
+      </ul>
+      <ul>
+        <li>Followers</li>
+        <li id="followers">3938</li>
+      </ul>
+      <ul>
+        <li>Following</li>
+        <li id="following">9</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><img src="./images/icon-location.svg" alt=""></li>
+        <li id="location">San Francisco</li>
+      </ul>
+      <ul>
+        <li><img src="./images/icon-twitter.svg" alt=""></li>
+        <li id="twitter" hidden="false"><a id="twitterLink" href="">Twitter</a></li>
+        <li id="twitterNotAvailable" hidden="true">Not Available</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><img src="./images/icon-website.svg" alt=""></li>
+        <li id="website" hidden="false"> <a id="websiteLink" href="">websiteLink</a> </li>
+        <li id="websiteNotAvailable" hidden="true">Not Available</li>
+      </ul>
+      <ul>
+        <li><img src="./images/icon-company.svg" alt=""></li>
+        <li id="company" hidden="false"><a id="companyLink" href="">testText</a></li>
+        <li id="companyNotAvailable" hidden="true">Not Available</li>
+      </ul>
+    </div>
+
+  </div>
 
 
 

@@ -1,42 +1,149 @@
+import { pageElements } from "./js/pageElements";
+
 
 const defineApiSearchQuery = () => {
-    const usernameInputValue = document.querySelector("#enterUsername").value;
-    console.log("this is username inptvalue:" + usernameInputValue);
-    const apiUrlBase = "https://api.github.com/users/";
-    const apiSearchQuery = `${apiUrlBase}${usernameInputValue}`;
-    console.log("this is search query: " + apiSearchQuery);
+    const usernameInputValue = pageElements.enterUsername.value;
+    const apiSearchQuery = `https://api.github.com/users/${usernameInputValue}`;
     return apiSearchQuery;
 }
 
-const searchRequest = async () => {
-    const searchQuery = defineApiSearchQuery();
+const searchRequest = async (searchQuery) => {
     try {
         const resolved = await fetch(searchQuery);
         const data = await resolved.json();
+        console.log(data);
         return data;
         /* Pertinent property names are:
-        data.name
-        data.login
-        data.bio
-        data.location
-        data.blog
-        data.twitter_username
-        data.company
-        data.created_at
-        data.followers
-        data.following
-        data.public_repos
+        data.avatar_url id="profileImg"
+        data.name id="name" 
+        data.login id="username"
+        data.bio id="bio"
+        data.location id="location"
+        data.blog 
+        data.twitter_username id="twitter"
+        data.company 
+        data.created_at id="joinedDate"
+        data.followers id="followers"
+        data.following id="following"
+        data.public_repos id="repos"
         */
     } catch (error) {
         console.log(error);
     }
 }
 
-const executeSearch = () => {
-    const searchButton = document.querySelector("#searchButton");
-    searchButton.addEventListener("pointerdown", searchRequest);
+const insertProfilePic = data => pageElements.profileImg.setAttribute("src", data.avatar_url);
+
+const formatAndInsertName = data => {
+    let nameValue = data.name;
+    if (!nameValue) {
+        nameValue = data.login;
+        nameValue = nameValue.replace(/^@/, "");
+    }
+    pageElements.name.innerText = nameValue;
 }
-executeSearch();
+
+const formatAndInsertJoinedDate = data => {
+    let signupDate = new Date(data.created_at);
+    signupDate = signupDate.toLocaleDateString('en-gb', { day: "numeric", month: "short", year: "numeric" });
+    pageElements.joinedDate.innerText = signupDate;
+}
+
+const insertUsername = data => {
+    let username = data.login;
+    username = username.replace(/^@/, "");
+    pageElements.username.innerText = `@${username}`;
+}
+
+const formatAndInsertBio = data => {
+    let bioValue = data.bio;
+    if (!bioValue) {
+        bioValue = "This profile has no bio"
+    }
+    pageElements.bio.innerText = bioValue;
+}
+
+const insertRepos = data => pageElements.repos.innerText = data.public_repos;
+
+const insertFollowers = data => pageElements.followers.innerText = data.followers;
+
+const insertFollowing = data => pageElements.following.innerText = data.following;
+
+const formatAndInsertLocation = data => {
+    let locationValue = data.location;
+    if (!locationValue) {
+        locationValue = "Not Available";
+    }
+    pageElements.location.innerText = locationValue;
+}
+
+const formatAndInsertTwitter = data => {
+    let twitterValue = data.twitter_username;
+    if (!twitterValue) {
+        pageElements.twitter.hidden = true;
+        pageElements.twitterNotAvailable.hidden = false;
+    } else {
+        pageElements.twitter.hidden = false;
+        pageElements.twitterNotAvailable.hidden = true;
+        pageElements.twitterLink.innerText = twitterValue;
+        twitterValue = twitterValue.replace(/^@/, "");
+        twitterValue = `https://twitter.com/${twitterValue}`;
+        pageElements.twitterLink.setAttribute("href", twitterValue);
+    }
+}
+
+const formatAndInsertWebsite = data => {
+    let websiteValue = data.blog;
+    if (!websiteValue) {
+        pageElements.website.hidden = true;
+        pageElements.websiteNotAvailable.hidden = false;
+    } else {
+        pageElements.website.hidden = false;
+        pageElements.websiteNotAvailable.hidden = true;
+        pageElements.websiteLink.setAttribute("href", websiteValue);
+        pageElements.websiteLink.innerText = websiteValue;
+    }
+}
+
+const formatAndInsertCompany = data => {
+    let companyValue = data.company;
+    if (!companyValue || companyValue[0] !== "@") {
+        pageElements.company.hidden = true;
+        pageElements.companyNotAvailable.hidden = false;
+    } else {
+        pageElements.company.hidden = false;
+        pageElements.companyNotAvailable.hidden = true;
+        pageElements.companyLink.innerText = companyValue;
+        console.log(companyValue);
+        companyValue = companyValue.replace(/^@/, "");
+        console.log(companyValue);
+        companyValue = `https://github.com/${companyValue}`;
+        pageElements.companyLink.setAttribute("href", companyValue);
+    }
+}
+
+
+const manager = async () => {
+    const userData = await searchRequest(defineApiSearchQuery());
+    insertProfilePic(userData);
+    formatAndInsertName(userData);
+    formatAndInsertJoinedDate(userData);
+    insertUsername(userData);
+    formatAndInsertBio(userData);
+    insertRepos(userData);
+    insertFollowers(userData);
+    insertFollowing(userData);
+    formatAndInsertLocation(userData);
+    formatAndInsertTwitter(userData);
+    formatAndInsertWebsite(userData);
+    formatAndInsertCompany(userData);
+}
+
+const addEventListeners = () => {
+    const searchButton = document.querySelector("#searchButton");
+    searchButton.addEventListener("pointerdown", manager);
+}
+addEventListeners();
 
 
 /* 
