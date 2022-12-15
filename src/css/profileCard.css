@@ -5,6 +5,8 @@
     width: 327px;
     border-radius: 15px;
     margin: 16px 0 0 0;
+    padding: 32px 0 48px 0;
+    background-color: var(--profileCardBGColor);
 
     @media (--minTabletWidth) {
         width: 573px;
@@ -19,7 +21,7 @@
 .profileCard__header {
     display: flex;
     width: 234px;
-    margin: 32px 0 0 24px;
+    margin: 0 0 0 24px;
 
     @media (--minTabletWidth) {
         width: 334px;
@@ -74,6 +76,7 @@
     font-weight: 700;
     line-height: 1.5;
     margin: 0;
+    color: var(--profileCardNameFontColor);
 
     @media (--minTabletWidth) {
         font-size: 26px;
@@ -99,6 +102,7 @@
     font-weight: 400;
     line-height: 1.4615;
     margin: 6px 0 0 0;
+    color: var(--profileCardJoinedFontColor);
 
     @media (--minTabletWidth) {
         font-size: 15px;
@@ -117,6 +121,7 @@
     font-weight: 400;
     line-height: 1.923;
     margin: 33px 24px 0 24px;
+    color: var(--profileCardBioFontColor);
 
     @media (--minTabletWidth) {
         width: 493px;
@@ -138,6 +143,7 @@
     justify-content: space-around;
     border-radius: 10px;
     margin: 23px 24px 0 24px;
+    background-color: var(--profileCardStatsBGColor);
 
     @media (--minTabletWidth) {
         width: 493px;
@@ -156,6 +162,7 @@
     font-weight: 400;
     line-height: 1.4545;
     margin: 18px 0 0 0;
+    color: var(--profileCardStatsHeaderFontColor);
 
     @media (--minTabletWidth) {
         font-size: 13px;
@@ -169,6 +176,7 @@
     font-weight: 700;
     line-height: 1.5;
     margin: 8px 0 0 0;
+    color: var(--profileCardStatsNumberFontColor);
 
     @media (--minTabletWidth) {
         font-size: 22px;
@@ -214,6 +222,7 @@
     font-weight: 400;
     line-height: 1.4615;
     text-decoration: none;
+    color: var(--profileCardFooterIconLabelFontColor);
 
     @media (--minTabletWidth) {
         font-size: 15px;

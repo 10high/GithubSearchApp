@@ -1,12 +1,16 @@
 @custom-media --minTabletWidth (min-width: 768px);
 @custom-media --minDesktopWidth (min-width: 1440px);
 
+
+
+
 .search__wrapper {
     position: relative;
     width: 327px;
     height: 60px;
     border-radius: 15px;
     margin: 36px 0 0 0;
+    background-color: var(--searchBGColor);
 
     @media (--minTabletWidth) {
         width: 573px;
@@ -35,13 +39,15 @@
 
 .search__inputField {
     width: 184px;
-    font-size: 18px;
+    font-size: 13px;
     font-weight: 400;
+    color: var(--searchInputFontColor);
     line-height: 1.3888;
     margin: 0 0 0 8.95px;
     border-style: none;
 
     @media (--minTabletWidth) {
+        font-size: 18px;
         margin: 0 0 0 23.94px;
     }
 }
@@ -73,14 +79,14 @@
     line-height: 1.48125;
     color: white;
     background-color: #0079FF;
-    margin: 0 7px 0 auto;
+    margin: 6.5px 7px 0 auto;
     padding: 12.5px 16px 12.5px 16px;
 
     @media (--minTabletWidth) {
         width: 106px;
         height: 50px;
         font-size: 16px;
-        margin: 0 10px 0 auto;
+        margin: 9.5px 10px 0 auto;
         padding: 12.5px 23px 13.5px 24px;
     }
 }

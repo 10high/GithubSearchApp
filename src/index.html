@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
   <script type="module" src="./app.js"></script>
@@ -17,28 +20,27 @@
   <div class="pageWrapper">
     <div class="header">
       <h1 class="header__heading">devfinder</h1>
-      <div>
+      <button class="header__button">
         <ul hidden="true" class="header__lightMode list--horizontal">
           <li>Light</li>
           <li><img class="header__toggleIcon" src="./images/icon-sun.svg" alt="" width="20" height="20"></li>
         </ul>
+
         <ul class="header__darkMode list--horizontal">
           <li>Dark</li>
           <li><img class="header__toggleIcon" src="./images/icon-moon.svg" alt="" width="20" height="20"></li>
         </ul>
-      </div>
+      </button>
     </div>
 
     <div class="search__wrapper">
-      <form action="">
-        <div class="search__bar">
-          <img class="search__icon" src="./images/icon-search.svg" alt="">
-          <input class="search__inputField" type="text" id="enterUsername" placeholder="Search GitHub username..."
-            required>
-          <p class="search__errorMessage" hidden="true">No results</p>
-          <button class="search__button" id="searchButton" type="button">Search</button>
-        </div>
-      </form>
+      <div class="search__bar">
+        <img class="search__icon" src="./images/icon-search.svg" alt="">
+        <input class="search__inputField" type="text" id="enterUsername" placeholder="Search GitHub username...">
+        <p class="search__errorMessage" hidden="true" id="errorMessage">No results</p>
+        <button class="search__button" id="searchButton" type="button">Search</button>
+      </div>
+
     </div>
 
     <div class="profileCard">

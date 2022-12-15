@@ -7,6 +7,26 @@
 @custom-media --minTabletWidth (min-width: 768px);
 @custom-media --minDesktopWidth (min-width: 1440px);
 
+:root {
+    --headerFontColor: #222731;
+    --toggleModeFontColor: #4B6A9B;
+    --bodyColor: #F6F8FF;
+    --searchBGColor: #FEFEFE;
+    --searchInputFontColor: #4B6A9B;
+    --profileCardBGColor: #FEFEFE;
+    --profileCardNameFontColor: #2B3442;
+    --profileCardJoinedFontColor: #697C9A;
+    --profileCardBioFontColor: #4B6A9B;
+    --profileCardStatsBGColor: #F6F8FF;
+    --profileCardStatsHeaderFontColor: #4B6A9B;
+    --profileCardStatsNumberFontColor: #2B3442;
+    --profileCardFooterIconLabelFontColor: #4B6A9B;
+}
+
+body {
+    background-color: var(--bodyColor);
+}
+
 .pageWrapper {
     width: 327px;
 
@@ -18,4 +38,8 @@
         width: 730px;
     }
 
+}
+
+.lightmode--dropshadow {
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }

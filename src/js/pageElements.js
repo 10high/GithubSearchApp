@@ -17,7 +17,9 @@ const pageElementIds = [
     "websiteLink",
     "company",
     "companyNotAvailable",
-    "companyLink"
+    "companyLink",
+    "errorMessage",
+    "searchButton"
 ]
 
 const pageElements = {}

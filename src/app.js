@@ -10,9 +10,13 @@ const defineApiSearchQuery = () => {
 const searchRequest = async (searchQuery) => {
     try {
         const resolved = await fetch(searchQuery);
-        const data = await resolved.json();
-        console.log(data);
-        return data;
+        if (resolved.status === 200) {
+            const data = await resolved.json();
+            return data;
+        } else {
+            return null;
+        };
+
         /* Pertinent property names are:
         data.avatar_url id="profileImg"
         data.name id="name" 
@@ -28,7 +32,7 @@ const searchRequest = async (searchQuery) => {
         data.public_repos id="repos"
         */
     } catch (error) {
-        console.log(error);
+        console.log("this is the error" + error);
     }
 }
 
@@ -125,6 +129,11 @@ const formatAndInsertCompany = data => {
 
 const manager = async () => {
     const userData = await searchRequest(defineApiSearchQuery());
+    if (userData === null) {
+        pageElements.errorMessage.hidden = false;
+        return;
+    }
+    pageElements.errorMessage.hidden = true;
     insertProfilePic(userData);
     formatAndInsertName(userData);
     formatAndInsertJoinedDate(userData);
@@ -140,8 +149,8 @@ const manager = async () => {
 }
 
 const addEventListeners = () => {
-    const searchButton = document.querySelector("#searchButton");
-    searchButton.addEventListener("pointerdown", manager);
+    pageElements.searchButton.addEventListener("pointerdown", manager);
+    pageElements.enterUsername.addEventListener("change", manager);
 }
 addEventListeners();
 
