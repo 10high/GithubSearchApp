@@ -46,7 +46,7 @@ const formatAndInsertName = data => {
 const formatAndInsertJoinedDate = data => {
     let signupDate = new Date(data.created_at);
     signupDate = signupDate.toLocaleDateString('en-gb', { day: "numeric", month: "short", year: "numeric" });
-    pageElements.joinedDate.innerText = signupDate;
+    pageElements.joinedDate.innerText = `Joined ${signupDate}`;
 }
 
 const insertUsername = data => {

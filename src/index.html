@@ -14,73 +14,94 @@
 
 <body>
 
-  <div>
-    <h1>devfinder</h1>
-
-    <div>
-      <ul>
-        <li>Light</li>
-        <li><img src="./images/icon-sun.svg" alt=""></li>
-      </ul>
-      <ul hidden="true">
-        <li>Dark</li>
-        <li><img src="./images/icon-moon.svg" alt=""></li>
-      </ul>
-    </div>
-  </div>
-  <form action="">
-    <img src="./images/icon-search.svg" alt="">
-    <input type="text" id="enterUsername" placeholder="Search GitHub username..." required>
-    <button id="searchButton" type="button">Search</button>
-  </form>
-
-  <div>
-    <img id="profileImg" src="https://avatars.githubusercontent.com/u/99827666?v=4" alt="">
-    <p id="name">The Octocat</p>
-    <ul>
-      <li>Joined</li>
-      <li id="joinedDate">25 Jan 2011</li>
-    </ul>
-    <p id="username">@octocat</p>
-    <p id="bio">This profile has no bio</p>
-    <div>
-      <ul>
-        <li>Repos</li>
-        <li id="repos">8</li>
-      </ul>
-      <ul>
-        <li>Followers</li>
-        <li id="followers">3938</li>
-      </ul>
-      <ul>
-        <li>Following</li>
-        <li id="following">9</li>
-      </ul>
-    </div>
-    <div>
-      <ul>
-        <li><img src="./images/icon-location.svg" alt=""></li>
-        <li id="location">San Francisco</li>
-      </ul>
-      <ul>
-        <li><img src="./images/icon-twitter.svg" alt=""></li>
-        <li id="twitter" hidden="false"><a id="twitterLink" href="">Twitter</a></li>
-        <li id="twitterNotAvailable" hidden="true">Not Available</li>
-      </ul>
-    </div>
-    <div>
-      <ul>
-        <li><img src="./images/icon-website.svg" alt=""></li>
-        <li id="website" hidden="false"> <a id="websiteLink" href="">websiteLink</a> </li>
-        <li id="websiteNotAvailable" hidden="true">Not Available</li>
-      </ul>
-      <ul>
-        <li><img src="./images/icon-company.svg" alt=""></li>
-        <li id="company" hidden="false"><a id="companyLink" href="">testText</a></li>
-        <li id="companyNotAvailable" hidden="true">Not Available</li>
-      </ul>
+  <div class="pageWrapper">
+    <div class="header">
+      <h1 class="header__heading">devfinder</h1>
+      <div>
+        <ul hidden="true" class="header__lightMode list--horizontal">
+          <li>Light</li>
+          <li><img class="header__toggleIcon" src="./images/icon-sun.svg" alt="" width="20" height="20"></li>
+        </ul>
+        <ul class="header__darkMode list--horizontal">
+          <li>Dark</li>
+          <li><img class="header__toggleIcon" src="./images/icon-moon.svg" alt="" width="20" height="20"></li>
+        </ul>
+      </div>
     </div>
 
+    <div class="search__wrapper">
+      <form action="">
+        <div class="search__bar">
+          <img class="search__icon" src="./images/icon-search.svg" alt="">
+          <input class="search__inputField" type="text" id="enterUsername" placeholder="Search GitHub username..."
+            required>
+          <p class="search__errorMessage" hidden="true">No results</p>
+          <button class="search__button" id="searchButton" type="button">Search</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="profileCard">
+      <div class="profileCard__header">
+        <img class="profileCard__profilePic" id="profileImg" src="https://avatars.githubusercontent.com/u/99827666?v=4"
+          alt="">
+        <div class="profileCard__headerInfo">
+          <div class="profileCard__headerNames">
+            <h2 class="profileCard__name" id="name">The Octocat</h2>
+            <p class="profileCard__username" id="username">@octocat</p>
+          </div>
+          <p class="profileCard__joinedDate" id="joinedDate">Joined 25 Jan 2011</p>
+        </div>
+      </div>
+      <p class="profileCard__bio" id="bio">This profile has no bio</p>
+      <div class="profileCard__stats">
+        <ul class="list--vertical">
+          <li class="profileCard__statsHeader">Repos</li>
+          <li class="profileCard__statsNumber" id="repos">8</li>
+        </ul>
+        <ul class="list--vertical">
+          <li class="profileCard__statsHeader">Followers</li>
+          <li class="profileCard__statsNumber" id="followers">3938</li>
+        </ul>
+        <ul class="list--vertical">
+          <li class="profileCard__statsHeader">Following</li>
+          <li class="profileCard__statsNumber" id="following">9</li>
+        </ul>
+      </div>
+      <div class="profileCard__footer">
+        <div class="profileCard__footerSection">
+          <ul class="list--horizontal">
+            <li><img class="profileCard__footerLocationIcon" src="./images/icon-location.svg" alt="" width="14"
+                height="20"></li>
+            <li class="profileCard__footerIconLabel" id="location">San Francisco</li>
+          </ul>
+          <ul class="list--horizontal">
+            <li><img class="profileCard__footerWebsiteIcon" src="./images/icon-website.svg" alt="" width="20"
+                height="20"></li>
+            <li id="website" hidden="false"> <a class="profileCard__footerIconLabel" id="websiteLink"
+                href="">websiteLink</a> </li>
+            <li class="profileCard__footerIconLabel" id="websiteNotAvailable" hidden="true">Not Available</li>
+          </ul>
+
+        </div>
+        <div class="profileCard__footerSection">
+          <ul class="list--horizontal">
+            <li><img class="profileCard__footerTwitterIcon" src="./images/icon-twitter.svg" alt="" width="20"
+                height="16"></li>
+            <li id="twitter" hidden="false"><a class="profileCard__footerIconLabel" id="twitterLink" href="">Twitter</a>
+            </li>
+            <li class="profileCard__footerIconLabel" id="twitterNotAvailable" hidden="true">Not Available</li>
+          </ul>
+          <ul class="list--horizontal">
+            <li><img class="profileCard__footerCompanyIcon" src="./images/icon-company.svg" alt="" width="20"
+                height="20"></li>
+            <li id="company" hidden="false"><a class="profileCard__footerIconLabel" id="companyLink"
+                href="">testText</a></li>
+            <li class="profileCard__footerIconLabel" id="companyNotAvailable" hidden="true">Not Available</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 
 </body>

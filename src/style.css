@@ -1,1 +1,21 @@
 @import url(./css/normalize.css);
+@import url(./css/lists.css);
+@import url(./css/header.css);
+@import url(./css/search.css);
+@import url(./css/profileCard.css);
+
+@custom-media --minTabletWidth (min-width: 768px);
+@custom-media --minDesktopWidth (min-width: 1440px);
+
+.pageWrapper {
+    width: 327px;
+
+    @media (--minTabletWidth) {
+        width: 573px;
+    }
+
+    @media (--minDesktopWidth) {
+        width: 730px;
+    }
+
+}

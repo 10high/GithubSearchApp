@@ -1,0 +1,28 @@
+@custom-media --minTabletWidth (min-width: 768px);
+@custom-media --minDesktopWidth (min-width: 1440px);
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__heading {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.header__lightMode,
+.header__darkMode {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4615;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
+.header__toggleIcon {
+    height: 20px;
+    width: 20px;
+    margin: 0 0 0 16px;
+}

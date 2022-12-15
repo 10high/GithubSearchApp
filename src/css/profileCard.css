@@ -1,0 +1,262 @@
+@custom-media --minTabletWidth (min-width: 768px);
+@custom-media --minDesktopWidth (min-width: 1440px);
+
+.profileCard {
+    width: 327px;
+    border-radius: 15px;
+    margin: 16px 0 0 0;
+
+    @media (--minTabletWidth) {
+        width: 573px;
+        margin: 24px 0 0 0;
+    }
+
+    @media (--minDesktopWidth) {
+        width: 730px;
+    }
+}
+
+.profileCard__header {
+    display: flex;
+    width: 234px;
+    margin: 32px 0 0 24px;
+
+    @media (--minTabletWidth) {
+        width: 334px;
+        margin: 40px 0 0 40px;
+    }
+
+    @media (--minDesktopWidth) {
+        justify-content: space-between;
+        width: 634px;
+        margin: 48px 0 0 48px;
+    }
+}
+
+.profileCard__profilePic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+    @media (--minTabletWidth) {
+        width: 117px;
+        height: 117px;
+    }
+
+}
+
+.profileCard__headerInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 19.5px;
+
+    @media (--minTabletWidth) {
+        margin: 0 0 0 41px;
+    }
+
+    @media (--minDesktopWidth) {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 480px;
+        margin: 0 0 0 37px;
+
+    }
+
+}
+
+.profileCard__headerNames {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileCard__name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+
+    @media (--minTabletWidth) {
+        font-size: 26px;
+    }
+}
+
+.profileCard__username {
+    font-size: 13px;
+    font-weight: 400;
+    color: #0079FF;
+    line-height: 1.4615;
+    margin: 0;
+
+    @media (--minTabletWidth) {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 2px 0 0 0;
+    }
+}
+
+.profileCard__joinedDate {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4615;
+    margin: 6px 0 0 0;
+
+    @media (--minTabletWidth) {
+        font-size: 15px;
+        line-height: 1.4666;
+        margin: 4px 0 0 0;
+    }
+
+    @media (--minDesktopWidth) {
+        margin: 0;
+    }
+}
+
+.profileCard__bio {
+    width: 279px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.923;
+    margin: 33px 24px 0 24px;
+
+    @media (--minTabletWidth) {
+        width: 493px;
+        font-size: 15px;
+        line-height: 1.666;
+        margin: 24px 40px 0 40px;
+    }
+
+    @media (--minDesktopWidth) {
+        width: 480px;
+        margin: 0 48px 0 auto;
+    }
+}
+
+.profileCard__stats {
+    width: 279px;
+    height: 85px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin: 23px 24px 0 24px;
+
+    @media (--minTabletWidth) {
+        width: 493px;
+        margin: 32px 40px 0 40px;
+
+    }
+
+    @media (--minDesktopWidth) {
+        width: 480px;
+        margin: 0 48px 0 auto;
+    }
+}
+
+.profileCard__statsHeader {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.4545;
+    margin: 18px 0 0 0;
+
+    @media (--minTabletWidth) {
+        font-size: 13px;
+        line-height: 1.4615;
+        margin: 15px 0 0 0;
+    }
+}
+
+.profileCard__statsNumber {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 8px 0 0 0;
+
+    @media (--minTabletWidth) {
+        font-size: 22px;
+        margin: 1px 0 0 0;
+    }
+}
+
+.profileCard__footer {
+    width: auto;
+    margin: 24px 0 0 24px;
+
+    @media (--minTabletWidth) {
+        width: 429px;
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0 0 40px;
+    }
+
+    @media (--minDesktopWidth) {
+        width: 429px;
+        margin: 0 99px 0 auto;
+    }
+
+}
+
+
+.profileCard__footerSection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 0 16px 0;
+
+
+    @media (--minTabletWidth) {
+        gap: 15px;
+        margin: 0 0 19px 0;
+
+    }
+}
+
+.profileCard__footerIconLabel {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4615;
+    text-decoration: none;
+
+    @media (--minTabletWidth) {
+        font-size: 15px;
+        line-height: 1.4666;
+    }
+}
+
+.profileCard__footerLocationIcon {
+    width: 13.75px;
+    height: 20px;
+    margin: 0 19.25px 0 0;
+
+    @media (--minDesktopWidth) {
+        margin: 0 19.12px 0 0;
+    }
+}
+
+.profileCard__footerWebsiteIcon {
+    width: 19.99px;
+    height: 19.94px;
+    margin: 0 13px 0 0;
+
+    @media (--minDesktopWidth) {
+        margin: 0 16.01px 0 0;
+    }
+}
+
+.profileCard__footerTwitterIcon {
+    width: 20px;
+    height: 16.25px;
+    margin: 0 13px 0 0;
+
+    @media (--minTabletWidth) {
+        margin: 0 16px 0 0;
+    }
+}
+
+.profileCard__footerCompanyIcon {
+    width: 20px;
+    height: 19.85px;
+    margin: 0 13px 0 0;
+
+    @media (--minTabletWidth) {
+        margin: 0 16px 0 0;
+    }
+}

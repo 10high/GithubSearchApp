@@ -1,0 +1,15 @@
+ol,
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list--horizontal {
+    flex-direction: row;
+}
+
+.list--vertical {
+    flex-direction: column;
+}
