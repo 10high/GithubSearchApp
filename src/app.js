@@ -1,9 +1,7 @@
 import { pageElements } from "./js/pageElements";
 import { defineApiSearchQuery, searchRequest } from "./js/apiFetch";
 import { insertProfilePic, formatAndInsertName, formatAndInsertJoinedDate, insertUsername, formatAndInsertBio, insertRepos, insertFollowers, insertFollowing, formatAndInsertLocation, formatAndInsertTwitter, formatAndInsertWebsite, formatAndInsertCompany } from "./js/insertContent";
-
-
-
+import { toggleColorScheme } from "./js/colorSchemes";
 
 const manager = async () => {
     const userData = await searchRequest(defineApiSearchQuery());
@@ -26,9 +24,12 @@ const manager = async () => {
     formatAndInsertCompany(userData);
 }
 
+
+
 const addEventListeners = () => {
     pageElements.searchButton.addEventListener("pointerdown", manager);
     pageElements.enterUsername.addEventListener("change", manager);
+    pageElements.headerButton.addEventListener("pointerdown", toggleColorScheme);
 }
 addEventListeners();
 

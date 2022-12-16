@@ -7,52 +7,21 @@
 @custom-media --minTabletWidth (min-width: 768px);
 @custom-media --minDesktopWidth (min-width: 1440px);
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --headerFontColor: #222731;
-        --toggleModeFontColor: #4B6A9B;
-        --bodyColor: #F6F8FF;
-        --searchBGColor: #FEFEFE;
-        --searchInputFontColor: #4B6A9B;
-        --profileCardBGColor: #FEFEFE;
-        --profileCardNameFontColor: #2B3442;
-        --profileCardJoinedFontColor: #697C9A;
-        --profileCardBioFontColor: #4B6A9B;
-        --profileCardStatsBGColor: #F6F8FF;
-        --profileCardStatsHeaderFontColor: #4B6A9B;
-        --profileCardStatsNumberFontColor: #2B3442;
-        --profileCardFooterIconLabelFontColor: #4B6A9B;
-    }
-
-    .header__lightMode {
-        display: none;
-    }
-
-
+:root {
+    --headerFontColor: #222731;
+    --toggleModeFontColor: #4B6A9B;
+    --bodyColor: #F6F8FF;
+    --searchBGColor: #FEFEFE;
+    --searchInputFontColor: #4B6A9B;
+    --profileCardBGColor: #FEFEFE;
+    --profileCardNameFontColor: #2B3442;
+    --profileCardJoinedFontColor: #697C9A;
+    --profileCardBioFontColor: #4B6A9B;
+    --profileCardStatsBGColor: #F6F8FF;
+    --profileCardStatsHeaderFontColor: #4B6A9B;
+    --profileCardStatsNumberFontColor: #2B3442;
+    --profileCardFooterIconLabelFontColor: #4B6A9B;
 }
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --headerFontColor: #FFFFFF;
-        --toggleModeFontColor: #FFFFFF;
-        --bodyColor: #141D2F;
-        --searchBGColor: #1E2A47;
-        --searchInputFontColor: #FFFFFF;
-        --profileCardBGColor: #1E2A47;
-        --profileCardNameFontColor: #FFFFFF;
-        --profileCardJoinedFontColor: #FFFFFF;
-        --profileCardBioFontColor: #FFFFFF;
-        --profileCardStatsBGColor: #141D2F;
-        --profileCardStatsHeaderFontColor: #FFFFFF;
-        --profileCardStatsNumberFontColor: #FFFFFF;
-        --profileCardFooterIconLabelFontColor: #FFFFFF;
-    }
-
-    .header__darkMode {
-        display: none;
-    }
-}
-
 
 body {
     background-color: var(--bodyColor);

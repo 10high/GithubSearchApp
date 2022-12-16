@@ -19,7 +19,12 @@ const pageElementIds = [
     "companyNotAvailable",
     "companyLink",
     "errorMessage",
-    "searchButton"
+    "searchButton",
+    "lightmodeToggle",
+    "darkmodeToggle",
+    "headerButton",
+    "searchWrapper",
+    "profileCard"
 ]
 
 const pageElements = {}

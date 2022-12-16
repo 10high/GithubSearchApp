@@ -20,20 +20,20 @@
   <div class="pageWrapper">
     <div class="header">
       <h1 class="header__heading">devfinder</h1>
-      <button class="header__button">
-        <ul class="header__lightMode list--horizontal">
+      <button type="button" class="header__button" id="headerButton">
+        <ul class="header__lightMode list--horizontal" id="lightmodeToggle">
           <li>Light</li>
           <li><img class="header__toggleIcon" src="./images/icon-sun.svg" alt="" width="20" height="20"></li>
         </ul>
 
-        <ul class="header__darkMode list--horizontal">
+        <ul class="header__darkMode list--horizontal" id="darkmodeToggle" hidden="true">
           <li>Dark</li>
           <li><img class="header__toggleIcon" src="./images/icon-moon.svg" alt="" width="20" height="20"></li>
         </ul>
       </button>
     </div>
 
-    <div class="search__wrapper">
+    <div class="search__wrapper" id="searchWrapper">
       <div class="search__bar">
         <img class="search__icon" src="./images/icon-search.svg" alt="">
         <input class="search__inputField" type="text" id="enterUsername" placeholder="Search GitHub username&hellip;">
@@ -43,7 +43,7 @@
 
     </div>
 
-    <div class="profileCard">
+    <div class="profileCard" id="profileCard">
       <div class="profileCard__header">
         <img class="profileCard__profilePic" id="profileImg" src="https://avatars.githubusercontent.com/u/99827666?v=4"
           alt="">
