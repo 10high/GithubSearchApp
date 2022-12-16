@@ -3,36 +3,53 @@ import { defineApiSearchQuery, searchRequest } from "./js/apiFetch";
 import { insertProfilePic, formatAndInsertName, formatAndInsertJoinedDate, insertUsername, formatAndInsertBio, insertRepos, insertFollowers, insertFollowing, formatAndInsertLocation, formatAndInsertTwitter, formatAndInsertWebsite, formatAndInsertCompany } from "./js/insertContent";
 import { toggleColorScheme } from "./js/colorSchemes";
 
-const manager = async () => {
-    const userData = await searchRequest(defineApiSearchQuery());
-    if (userData === null) {
-        pageElements.errorMessage.hidden = false;
-        return;
-    }
-    pageElements.errorMessage.hidden = true;
-    insertProfilePic(userData);
-    formatAndInsertName(userData);
-    formatAndInsertJoinedDate(userData);
-    insertUsername(userData);
-    formatAndInsertBio(userData);
-    insertRepos(userData);
-    insertFollowers(userData);
-    insertFollowing(userData);
-    formatAndInsertLocation(userData);
-    formatAndInsertTwitter(userData);
-    formatAndInsertWebsite(userData);
-    formatAndInsertCompany(userData);
+
+const onPageOpen = async () => {
+  const userData = await searchRequest("https://api.github.com/users/octocat");
+  pageElements.errorMessage.hidden = true;
+  insertProfilePic(userData);
+  formatAndInsertName(userData);
+  formatAndInsertJoinedDate(userData);
+  insertUsername(userData);
+  formatAndInsertBio(userData);
+  insertRepos(userData);
+  insertFollowers(userData);
+  insertFollowing(userData);
+  formatAndInsertLocation(userData);
+  formatAndInsertTwitter(userData);
+  formatAndInsertWebsite(userData);
+  formatAndInsertCompany(userData);
 }
 
-
+const manager = async () => {
+  const userData = await searchRequest(defineApiSearchQuery());
+  if (userData === null) {
+    pageElements.errorMessage.hidden = false;
+    return;
+  }
+  pageElements.errorMessage.hidden = true;
+  insertProfilePic(userData);
+  formatAndInsertName(userData);
+  formatAndInsertJoinedDate(userData);
+  insertUsername(userData);
+  formatAndInsertBio(userData);
+  insertRepos(userData);
+  insertFollowers(userData);
+  insertFollowing(userData);
+  formatAndInsertLocation(userData);
+  formatAndInsertTwitter(userData);
+  formatAndInsertWebsite(userData);
+  formatAndInsertCompany(userData);
+}
 
 const addEventListeners = () => {
-    pageElements.searchButton.addEventListener("pointerdown", manager);
-    pageElements.enterUsername.addEventListener("change", manager);
-    pageElements.headerButton.addEventListener("pointerdown", toggleColorScheme);
+  pageElements.searchButton.addEventListener("pointerdown", manager);
+  pageElements.enterUsername.addEventListener("change", manager);
+  pageElements.headerButton.addEventListener("pointerdown", toggleColorScheme);
 }
 addEventListeners();
 
+onPageOpen();
 
 /* 
 Expected behaviour
