@@ -15,6 +15,7 @@
 
     @media (--minDesktopWidth) {
         width: 730px;
+        padding: 48px 0 12px 0;
     }
 }
 
@@ -25,13 +26,13 @@
 
     @media (--minTabletWidth) {
         width: 334px;
-        margin: 40px 0 0 40px;
+        margin: 0 0 0 40px;
     }
 
     @media (--minDesktopWidth) {
         justify-content: space-between;
         width: 634px;
-        margin: 48px 0 0 48px;
+        margin: 0 0 0 48px;
     }
 }
 
@@ -131,6 +132,8 @@
     }
 
     @media (--minDesktopWidth) {
+        position: relative;
+        top: -33px;
         width: 480px;
         margin: 0 48px 0 auto;
     }
@@ -197,7 +200,7 @@
 
     @media (--minDesktopWidth) {
         width: 429px;
-        margin: 0 99px 0 auto;
+        margin: 37px 99px 0 auto;
     }
 
 }

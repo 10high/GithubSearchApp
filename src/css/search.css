@@ -71,8 +71,8 @@
     margin: 0;
 
     @media (--minTabletWidth) {
-        right: calc(0% + 130px);
-        bottom: 50%;
+        right: calc(0% + 90px);
+        bottom: 40%;
     }
 }
 
