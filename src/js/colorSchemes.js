@@ -7,9 +7,11 @@ const colorVars = {
 const setDarkMode = () => {
     document.documentElement.style.setProperty("--headerFontColor", `#FFFFFF`);
     document.documentElement.style.setProperty("--toggleModeFontColor", `#FFFFFF`);
+    document.documentElement.style.setProperty("--toggleModeFontColorHover", `#90A4D4`);
     document.documentElement.style.setProperty("--bodyColor", `#141D2F`);
     document.documentElement.style.setProperty("--searchBGColor", `#1E2A47`);
     document.documentElement.style.setProperty("--searchInputFontColor", `#FFFFFF`);
+    document.documentElement.style.setProperty("--searchInputPlaceholderFontColor", `#FFFFFF`);
     document.documentElement.style.setProperty("--profileCardBGColor", `#1E2A47`);
     document.documentElement.style.setProperty("--profileCardNameFontColor", `#FFFFFF`);
     document.documentElement.style.setProperty("--profileCardJoinedFontColor", `#FFFFFF`);
@@ -27,9 +29,11 @@ const setDarkMode = () => {
 const setLightMode = () => {
     document.documentElement.style.setProperty("--headerFontColor", `#222731`);
     document.documentElement.style.setProperty("--toggleModeFontColor", `#4B6A9B`);
+    document.documentElement.style.setProperty("--toggleModeFontColorHover", `#222731`);
     document.documentElement.style.setProperty("--bodyColor", `#F6F8FF`);
     document.documentElement.style.setProperty("--searchBGColor", `#FEFEFE`);
-    document.documentElement.style.setProperty("--searchInputFontColor", `#4B6A9B`);
+    document.documentElement.style.setProperty("--searchInputFontColor", `#222731`);
+    document.documentElement.style.setProperty("--searchInputPlaceholderFontColor", `#4B6A9B`);
     document.documentElement.style.setProperty("--profileCardBGColor", `#FEFEFE`);
     document.documentElement.style.setProperty("--profileCardNameFontColor", `#2B3442`);
     document.documentElement.style.setProperty("--profileCardJoinedFontColor", `#697C9A`);

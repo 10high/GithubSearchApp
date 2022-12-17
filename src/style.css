@@ -10,6 +10,7 @@
 :root {
     --headerFontColor: #222731;
     --toggleModeFontColor: #4B6A9B;
+    --toggleModeFontColorHover: #222731;
     --bodyColor: #F6F8FF;
     --searchBGColor: #FEFEFE;
     --searchInputFontColor: #4B6A9B;

@@ -272,3 +272,10 @@
         margin: 0 16px 0 0;
     }
 }
+
+@media(hover: hover) {
+    .profileCard__footerSection a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}

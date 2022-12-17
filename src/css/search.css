@@ -56,12 +56,12 @@
 .search__inputField::placeholder {
     font-size: 13px;
     opacity: 1;
-    color: var(--searchInputFontColor);
+    color: var(--searchInputPlaceholderFontColor);
 }
 
 .search__errorMessage {
     position: absolute;
-    right: 50%;
+    right: 44%;
     transform: translateX(-50%);
     bottom: 0;
     font-size: 15px;
@@ -96,4 +96,16 @@
         margin: 9.5px 10px 0 auto;
         padding: 12.5px 23px 13.5px 24px;
     }
+}
+
+.search__button:active {
+    background-color: #60ABFF;
+}
+
+@media (hover: hover) {
+    .search__button:hover {
+        cursor: pointer;
+        background-color: #60ABFF;
+    }
+
 }

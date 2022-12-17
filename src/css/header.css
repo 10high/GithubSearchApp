@@ -32,7 +32,20 @@
 }
 
 .header__toggleIcon {
-    height: 20px;
-    width: 20px;
     margin: 0 0 0 16px;
+    fill: var(--toggleModeFontColor);
+}
+
+@media (hover: hover) {
+    .header__button:hover {
+        cursor: pointer;
+    }
+
+    .header__button:hover li {
+        color: var(--toggleModeFontColorHover);
+    }
+
+    .header__button:hover path {
+        fill: var(--toggleModeFontColorHover);
+    }
 }
