@@ -39,13 +39,16 @@ button:focus {
 
 .pageWrapper {
     width: 327px;
+    margin: 31px 0 0 0;
 
     @media (--minTabletWidth) {
         width: 573px;
+        margin: 140px 0 0 0;
     }
 
     @media (--minDesktopWidth) {
         width: 730px;
+        margin: 144px 0 0 0;
     }
 
 }
