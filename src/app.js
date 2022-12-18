@@ -42,13 +42,23 @@ const manager = async () => {
   formatAndInsertCompany(userData);
 }
 
+const isEqualsEnter = keycode => keycode.key === "Enter";
+
 const addEventListeners = () => {
   pageElements.searchButton.addEventListener("pointerdown", manager);
-  pageElements.enterUsername.addEventListener("change", manager);
+  pageElements.searchButton.addEventListener("keydown", (event) => {
+    isEqualsEnter(event) && manager();
+  });
+  pageElements.enterUsername.addEventListener("keydown", (event) => {
+    isEqualsEnter(event) && manager();
+  });
   pageElements.headerButton.addEventListener("pointerdown", toggleColorScheme);
+  pageElements.headerButton.addEventListener("keydown", (event) => {
+    isEqualsEnter(event) && toggleColorScheme();
+  });
 }
-addEventListeners();
 
+addEventListeners();
 onPageOpen();
 
 /* 

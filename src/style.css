@@ -28,6 +28,15 @@ body {
     background-color: var(--bodyColor);
 }
 
+button:focus {
+    border-style: solid;
+    border-color: var(--headerFontColor);
+    border-width: 1px;
+    outline-style: solid;
+    outline-color: var(--headerFontColor);
+    outline-width: 1px;
+}
+
 .pageWrapper {
     width: 327px;
 
