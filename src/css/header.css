@@ -29,6 +29,11 @@
     text-transform: uppercase;
     letter-spacing: 2.5px;
     color: var(--toggleModeFontColor);
+
+    @media (--minTabletWidth) {
+        margin: 4px 0 0 0;
+
+    }
 }
 
 .header__toggleIcon {

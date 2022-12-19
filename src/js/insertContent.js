@@ -25,9 +25,11 @@ const insertUsername = data => {
 }
 
 const formatAndInsertBio = data => {
+    pageElements.bio.classList.remove("notAvailable");
     let bioValue = data.bio;
     if (!bioValue) {
         bioValue = "This profile has no bio"
+        pageElements.bio.classList.add("notAvailable");
     }
     pageElements.bio.innerText = bioValue;
 }
@@ -39,9 +41,11 @@ const insertFollowers = data => pageElements.followers.innerText = data.follower
 const insertFollowing = data => pageElements.following.innerText = data.following;
 
 const formatAndInsertLocation = data => {
+    pageElements.location.classList.remove("notAvailable");
     let locationValue = data.location;
     if (!locationValue) {
         locationValue = "Not Available";
+        pageElements.location.classList.add("notAvailable");
     }
     pageElements.location.innerText = locationValue;
 }
