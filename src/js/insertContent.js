@@ -87,9 +87,7 @@ const formatAndInsertCompany = data => {
         pageElements.company.hidden = false;
         pageElements.companyNotAvailable.hidden = true;
         pageElements.companyLink.innerText = companyValue;
-        console.log(companyValue);
         companyValue = companyValue.replace(/^@/, "");
-        console.log(companyValue);
         companyValue = `https://github.com/${companyValue}`;
         pageElements.companyLink.setAttribute("href", companyValue);
     }
