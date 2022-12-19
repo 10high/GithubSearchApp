@@ -8,7 +8,7 @@
 }
 
 .header__heading {
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 700;
     line-height: 1.5;
     color: var(--headerFontColor);
@@ -23,7 +23,7 @@
 
 .header__lightMode,
 .header__darkMode {
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 700;
     line-height: 1.4615;
     text-transform: uppercase;

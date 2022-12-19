@@ -41,7 +41,7 @@
 
 .search__inputField {
     width: 184px;
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 400;
     color: var(--searchInputFontColor);
     background-color: var(--searchBGColor);
@@ -51,18 +51,18 @@
 
     @media (--minTabletWidth) {
         width: 254px;
-        font-size: 18px;
+        font-size: 1.125rem;
         margin: 7px 0 0 23px;
     }
 }
 
 .search__inputField::placeholder {
-    font-size: 13px;
+    font-size: 0.8125rem;
     opacity: 1;
     color: var(--searchInputPlaceholderFontColor);
 
     @media (--minTabletWidth) {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 }
 
@@ -71,7 +71,7 @@
     right: 44%;
     transform: translateX(-50%);
     bottom: 0;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 700;
     line-height: 1.4813;
     color: #F74646;
@@ -88,7 +88,7 @@
     height: 46px;
     border-style: none;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     line-height: 1.48125;
     color: white;
@@ -99,7 +99,7 @@
     @media (--minTabletWidth) {
         width: 106px;
         height: 50px;
-        font-size: 16px;
+        font-size: 1rem;
         margin: 9.5px 10px 0 auto;
         padding: 12.5px 23px 13.5px 24px;
     }
